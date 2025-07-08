@@ -1,0 +1,346 @@
+/* General Body and Container Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Body now has a solid black background */
+  color: #fff; /* White text for contrast */
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* --- Gradient Border Animation (Removed for projects) --- */
+/* @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} */
+
+/* Hero Section */
+#hero-section {
+  min-height: 90vh;
+  display: flex; /* Ensure flexbox for vertical centering */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center the hero-content container */
+  position: relative;
+  padding: 50px 0;
+}
+
+.hero-content {
+  left: -250px;
+  top: -40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-hero {
+  flex: 1; /* Allows this side to grow */
+  min-width: 300px; /* Minimum width before wrapping */
+  max-width: 55%; /* Adjust percentage as needed for text content width */
+  text-align: left;
+  padding: 20px; /* Keep padding */
+  box-sizing: border-box;
+}
+
+/* Adjustments for smaller screens to ensure proper stacking */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Stack items vertically on small screens */
+    text-align: center;
+  }
+  .left-hero {
+    /* Removed #vanta-halo-right as it's not in HTML anymore */
+    max-width: 100%; /* Full width when stacked */
+    min-width: unset; /* Remove min-width constraints for stacking */
+    padding: 10px; /* Adjust padding as needed */
+  }
+  /* #vanta-halo-right rule removed */
+}
+.intro-text {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+.name-text {
+  font-size: 4em; /* Large and bold */
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.subtitle-text {
+  font-size: 1em; /* Small font */
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.contact-options {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.contact-icon {
+  color: #fff;
+  font-size: 1.8em;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: translateY(-5px);
+  color: #00ffcc; /* Example hover color from gradient */
+}
+
+
+/* About Me Section */
+#about-section {
+  padding: 0px; /* Consistent padding with projects section */
+  text-align: center;
+  background-color: #000; /* Restore solid black background */
+}
+
+/* About Me Box Styling - now like a project card */
+.about-me-box {
+  max-width: 1400px; /* Limit width for readability, similar to project cards */
+  margin: -30px auto; /* Center the box within the section */
+  padding: 30px; /* Inner padding for content */
+  border-radius: 10px; /* Consistent with project cards */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Consistent with project cards */
+  box-sizing: border-box;
+
+  /* Dark background for the inner content, consistent with project cards */
+  background-color: #1a1a1a;
+
+  position: relative;
+  border: 2px solid #333; /* Simple, non-changing border */
+
+  /* z-index: 1; - Not strictly needed if no overlapping elements */
+}
+
+/* Ensure no gradient border for About Me box (content: none is good) */
+.about-me-box::before {
+  content: none;
+}
+
+/* Text inside About Me box */
+.about-me-box .stuff-i-do {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #00ffcc; /* Light text on dark background */
+  margin-top: 0; /* Remove top margin as paragraphs are gone */
+  margin-bottom: 10px; /* Space after heading */
+  text-align: left; /* Align left as in project details */
+}
+
+.about-me-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-me-box ul li {
+  font-size: 1em;
+  color: #eee; /* Light text on dark background */
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-me-box ul li i.fas.fa-play {
+  color: #00ffcc; /* Accent color for play icon, matching overall theme */
+  margin-right: 10px;
+  font-size: 0.8em;
+  transform: translateY(5px);
+}
+
+/* Projects Section */
+#projects-section {
+  padding: 20px 20px;
+  text-align: center;
+  background-color: #000; /* Restore solid black background */
+}
+
+#projects-section h2 {
+  font-size: 3em;
+  margin-bottom: 60px;
+  color: #00ffcc;
+  position: relative;
+}
+
+#projects-section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.project-card {
+  display: flex; /* Keep flex for potential future internal layout */
+  /* Removed flex-wrap as it's not as critical with no alternating image */
+  background-color: #1a1a1a; /* Card background fill */
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  /* Removed transition for transform and box-shadow to simplify hover */
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+
+  position: relative;
+  /* Removed z-index as it was primarily for the ::before pseudo-element */
+  /* z-index: 1; */
+
+  /* Added a simple border here to make it explicitly a border.
+       It will NOT be gradient or change on hover, as requested for simplicity. */
+  border: 2px solid #333; /* Simple, non-changing border */
+}
+
+/* Removed Project card gradient hover effect and related styles */
+
+.project-details {
+  /* flex: 2; - Removed, as it's the only item now */
+  width: 100%; /* Make it take full width of the card */
+  /* min-width: 300px; - Removed as it's full width */
+  padding: 30px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.project-details h3 {
+  font-size: 2.2em;
+  color: #00ffcc;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-details .skills-used {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Styles for the bullet-point project descriptions */
+.project-details .project-description-list {
+  list-style: none; /* Remove default list bullets */
+  padding: 0;
+  margin-bottom: 20px; /* Space after the list */
+}
+
+.project-details .project-description-list li {
+  font-size: 1em;
+  color: #eee;
+  margin-bottom: 8px; /* Space between list items */
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 20px; /* Space for custom bullet */
+  text-align: justify; /* Keep text justified */
+}
+
+.project-details .project-description-list li::before {
+  content: "\25B6"; /* Unicode right-pointing triangle for bullet */
+  color: #00ffcc; /* Accent color for the bullet */
+  font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  top: 4px; /* Adjust vertically to align with text */
+}
+
+.github-link {
+  display: inline-block;
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-right: 15px;
+}
+
+.github-link:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.github-link i {
+  margin-left: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-hero {
+    min-width: unset;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  /* Adjust about-me-box for smaller screens when it's a separate section */
+  .about-me-box {
+    max-width: 100%;
+    margin: 20px auto; /* Center with some top/bottom margin */
+  }
+
+  .name-text {
+    font-size: 3em;
+  }
+
+  .contact-options {
+    justify-content: center;
+  }
+
+  .project-card {
+    /* Removed .project-card.alternate */
+    flex-direction: column; /* Still good to ensure stacking */
+  }
+
+  .project-details {
+    text-align: center;
+  }
+
+  /* Removed .project-image-container related rules */
+  /* .project-image-container { order: -1; padding-bottom: 0; } */
+
+  .project-details .project-description-list {
+    text-align: left; /* Keep bullet points left-aligned on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .name-text {
+    font-size: 2.5em;
+  }
+
+  #projects-section h2,
+  #about-section h2 {
+    /* Apply to both section headings */
+    font-size: 2.5em;
+  }
+
+  .project-details h3 {
+    font-size: 1.8em;
+  }
+}
