@@ -8,10 +8,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-    // You can add more complex JavaScript here for:
-    // - Parallax effects on the gradient background
-    // - Interactive elements that reveal more on hover/click
-    // - A "read more" button for project descriptions if they get too long
-    // - Dynamic loading of content
 });
