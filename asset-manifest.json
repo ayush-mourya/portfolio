@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ayush-mourya/my-portfolio/static/css/main.b36d6076.css",
+    "main.js": "/ayush-mourya/my-portfolio/static/js/main.cce6afe7.js",
+    "static/js/453.6264690d.chunk.js": "/ayush-mourya/my-portfolio/static/js/453.6264690d.chunk.js",
+    "static/media/giphy.png": "/ayush-mourya/my-portfolio/static/media/giphy.82699a3016f7008f6c99.png",
+    "static/media/complex-system-logo.png": "/ayush-mourya/my-portfolio/static/media/complex-system-logo.9ca93c67d6be33f56710.png",
+    "static/media/iiitd-cs-logo.png": "/ayush-mourya/my-portfolio/static/media/iiitd-cs-logo.b470e870466badac7a7f.png",
+    "static/media/iiitd-logo.png": "/ayush-mourya/my-portfolio/static/media/iiitd-logo.4b6e2a16abba3e773d28.png",
+    "static/media/mind-map.png": "/ayush-mourya/my-portfolio/static/media/mind-map.55b501ad6b7f495a0d63.png",
+    "static/media/profile.jpg": "/ayush-mourya/my-portfolio/static/media/profile.5f697e0f2c5620a0587c.jpg",
+    "static/media/meesho-logo.png": "/ayush-mourya/my-portfolio/static/media/meesho-logo.d1fd5b79d522db2e137d.png",
+    "static/media/Leetcode-logo.png": "/ayush-mourya/my-portfolio/static/media/Leetcode-logo.bb77eb795f0894b826de.png",
+    "index.html": "/ayush-mourya/my-portfolio/index.html",
+    "main.b36d6076.css.map": "/ayush-mourya/my-portfolio/static/css/main.b36d6076.css.map",
+    "main.cce6afe7.js.map": "/ayush-mourya/my-portfolio/static/js/main.cce6afe7.js.map",
+    "453.6264690d.chunk.js.map": "/ayush-mourya/my-portfolio/static/js/453.6264690d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b36d6076.css",
+    "static/js/main.cce6afe7.js"
+  ]
+}
